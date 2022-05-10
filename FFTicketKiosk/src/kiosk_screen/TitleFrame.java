@@ -1,5 +1,5 @@
-//ÀüÃ¼ ÇÁ·¹ÀÓ ¹× Å¸ÀÌÆ²(Å°¿À½ºÅ©¸í/¾È³»¹®±¸)
-//¹öÆ°
+//ì „ì²´ í”„ë ˆì„ ë° íƒ€ì´í‹€(í‚¤ì˜¤ìŠ¤í¬ëª…/ì•ˆë‚´ë¬¸êµ¬)
+//ë²„íŠ¼
 package kiosk_screen;
 import java.awt.Color;
 import java.awt.Container;
@@ -8,41 +8,41 @@ import java.awt.Font;
 import javax.swing.*;
 
 public class TitleFrame extends JFrame {
-	//ÇÁ·¹ÀÓ »ı¼º
+	//í”„ë ˆì„ ìƒì„±
 	public TitleFrame() {
 		
-		setTitle("¿µÈ­ Æ¼ÄÏ ÆÇ¸Å Å°¿À½ºÅ©");
-		setSize(1100,800); 	// ÇÁ·¹ÀÓ Å©±â 1100*800
+		setTitle("ì˜í™” í‹°ì¼“ íŒë§¤ í‚¤ì˜¤ìŠ¤í¬");
+		setSize(1100,800); 	// í”„ë ˆì„ í¬ê¸° 1100*800
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	 
-							//ÇÁ·¹ÀÓ Á¾·á ¹öÆ° Å¬¸¯ ½Ã ÇÁ·¹ÀÓ ´İÈ÷°í ÇÁ·Î±×·¥ Á¾·áµÊ
-		setVisible(true); 	// ÇÁ·¹ÀÓ Ãâ·Â
+							//í”„ë ˆì„ ì¢…ë£Œ ë²„íŠ¼ í´ë¦­ ì‹œ í”„ë ˆì„ ë‹«íˆê³  í”„ë¡œê·¸ë¨ ì¢…ë£Œë¨
+		setVisible(true); 	// í”„ë ˆì„ ì¶œë ¥
 		
 		
-		//contentPane »ı¼º (¹èÄ¡°ü¸®ÀÚ ¾øÀ½)
+		//contentPane ìƒì„± (ë°°ì¹˜ê´€ë¦¬ì ì—†ìŒ)
 		Container title = getContentPane();		
 		title.setLayout(null);
 		
-		//[Å°¿À½ºÅ©¸í] »ı¼º
-		JPanel title1 = new JPanel();						//(ÆĞ³Î): title1
-		JLabel titleL1 = new JLabel("À¶ÇÁ¿µÈ­Á¦ Æ¼ÄÏ ÆÇ¸Å");	//(¶óº§): titleL1
-		//[¾È³»¹®±¸] »ı¼º
-		JPanel title2 = new JPanel();						//(ÆĞ³Î): title2
-		JLabel titleL2 = new JLabel("ÀÔÀå±ÇÀÌ ¹ß±ŞµÇ¾ú½À´Ï´Ù"); //(¶óº§): titleL2
+		//[í‚¤ì˜¤ìŠ¤í¬ëª…] ìƒì„±
+		JPanel title1 = new JPanel();						//(íŒ¨ë„): title1
+		JLabel titleL1 = new JLabel("ìœµí”„ì˜í™”ì œ í‹°ì¼“ íŒë§¤");	//(ë¼ë²¨): titleL1
+		//[ì•ˆë‚´ë¬¸êµ¬] ìƒì„±
+		JPanel title2 = new JPanel();						//(íŒ¨ë„): title2
+		JLabel titleL2 = new JLabel("ì…ì¥ê¶Œì´ ë°œê¸‰ë˜ì—ˆìŠµë‹ˆë‹¤"); //(ë¼ë²¨): titleL2
 		
-		//Å¸ÀÌÆ² Ä¡¼ö ¼³Á¤
-				int lft = 280;			//Å°¿À½ºÅ©¸í(ÆĞ³Î) °¡·Î ±æÀÌ
-				int rgt = 1100 - lft;	//¾È³»¹®±¸(ÆĞ³Î) °¡·Î ±æÀÌ (ÇÁ·¹ÀÓ °¡·Î ±æÀÌ - Å°¿À½ºÅ©¸í(ÆĞ³Î) °¡·Î ±æÀÌ)
-				int hgt = 70;			//¼¼·Î ±æÀÌ
+		//íƒ€ì´í‹€ ì¹˜ìˆ˜ ì„¤ì •
+				int lft = 280;			//í‚¤ì˜¤ìŠ¤í¬ëª…(íŒ¨ë„) ê°€ë¡œ ê¸¸ì´
+				int rgt = 1100 - lft;	//ì•ˆë‚´ë¬¸êµ¬(íŒ¨ë„) ê°€ë¡œ ê¸¸ì´ (í”„ë ˆì„ ê°€ë¡œ ê¸¸ì´ - í‚¤ì˜¤ìŠ¤í¬ëª…(íŒ¨ë„) ê°€ë¡œ ê¸¸ì´)
+				int hgt = 70;			//ì„¸ë¡œ ê¸¸ì´
 		
-		//title1 ¼³Á¤
+		//title1 ì„¤ì •
 		title1.setLayout(null);
-		Color color1 = new Color(0x006633, false);		//¹è°æ»ö ÁöÁ¤
+		Color color1 = new Color(0x006633, false);		//ë°°ê²½ìƒ‰ ì§€ì •
 		title1.setBounds(0,0,lft,hgt);
 		title1.setBackground(color1);
 		//title1.setVisible(true);
 		add(title1);
 		
-		//title2 ¼³Á¤
+		//title2 ì„¤ì •
 		title2.setLayout(null);
 		title2.setLocation(lft, 0);
 		title2.setSize(rgt, hgt);
@@ -50,39 +50,39 @@ public class TitleFrame extends JFrame {
 		//title2.setVisible(true);
 		add(title2);		
 		
-		//titleL1 ¼³Á¤
+		//titleL1 ì„¤ì •
 		titleL1.setHorizontalAlignment(JLabel.CENTER);
 		titleL1.setSize(lft, hgt);
-		titleL1.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 25));
+		titleL1.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.PLAIN, 25));
 		titleL1.setForeground(Color.WHITE);
 		//title.add(title_l);
 		title1.add(titleL1);
 		
-		//titleL2 ¼³Á¤
+		//titleL2 ì„¤ì •
 		titleL2.setHorizontalAlignment(JLabel.LEFT);
 		titleL2.setBounds(20,0,rgt, hgt);
-		titleL2.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 26));
+		titleL2.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 26));
 		titleL2.setForeground(Color.WHITE);
 		//titleR.add(titleL2);
 		title2.add(titleL2);
 		
 		
-		//¹öÆ° Âü°í¿ë
-		//È®ÀÎ¿Ï·á ¹öÆ°: finish
-		JButton finish = new JButton("È®ÀÎ ¿Ï·á");
+		//ë²„íŠ¼ ì°¸ê³ ìš©
+		//í™•ì¸ì™„ë£Œ ë²„íŠ¼: finish
+		JButton finish = new JButton("í™•ì¸ ì™„ë£Œ");
 		
-		//finish ¼³Á¤
+		//finish ì„¤ì •
 		finish.setBounds(820, 800-185, 130, 80);
-		Color bColor = new Color(0x3333FF, false);				//¹öÆ° »ö ÁöÁ¤
+		Color bColor = new Color(0x3333FF, false);				//ë²„íŠ¼ ìƒ‰ ì§€ì •
 		finish.setBackground(bColor);
-		finish.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 21));
+		finish.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.BOLD, 21));
 		finish.setForeground(Color.WHITE);
 		add(finish);
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//ÀüÃ¼ ÇÁ·¹ÀÓ
+		//ì „ì²´ í”„ë ˆì„
 		TitleFrame frame = new TitleFrame();
 		
 	}
